@@ -1,0 +1,75 @@
+// doc/install.dox
+
+// Copyright 2009-2011 Microsoft Corporation
+//           2013-2014 Johns Hopkins University (author: Daniel Povey)
+
+// See ../../COPYING for clarification regarding multiple authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+
+//  http://www.apache.org/licenses/LICENSE-2.0
+
+// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+// WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+// MERCHANTABLITY OR NON-INFRINGEMENT.
+// See the Apache 2 License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ \page install Downloading and installing Kaldi
+
+
+  \section install_transition  Transition to github
+
+  Due to the long recent sourceforge outage, we have now transitioned to
+ github for all future development.  We still intend to maintain a
+ read-only subversion mirror of the github parent, located at sourceforge and mirrored
+ by us; however, we won't be able to set that up until Sourceforge comes back up.
+
+  While sourceforge is still down, the easiest way to access Kaldi as follows:
+\verbatim
+  git clone https://github.com/kaldi-asr/kaldi.git
+\endverbatim
+ You can then keep it up-to-date using "git pull".
+  When sourceforge comes back up, you will be free to access it either through github
+  or through the subversion commands below.
+
+ If you may want to contribute to Kaldi, this will mostly be done using pull requests.
+ You would first log in to github and go to https://github.com/kaldi-asr/kaldi and click on
+ "fork" to fork the repository.  Then, in your local fork of the repository you would
+ do your work in a differently named branch, and generate a pull request through the
+ online interface of github.  We will soon provide more detailed instructions on this.
+
+ \section install_download  Dowloading Kaldi (old instructions)
+
+  You first need to install Subversion (SVN).  The most current version of Kaldi,
+  possibly including unfinished and experimental features, can
+   be downloaded by typing into a shell:
+  \verbatim
+    svn co https://svn.code.sf.net/p/kaldi/code/trunk kaldi-trunk
+  \endverbatim
+ If you want to get updates and bug fixes you can go to some checked-out
+ directory, and type
+  \verbatim
+    svn update
+  \endverbatim
+ If "svn update" prints out scary looking messages about conflicts (caused by
+ you changing parts of files that were later modified centrally),
+ you may have to resolve the conflicts; for that, we recommend that you
+ read about how svn works.
+
+
+  \section install_install Installing Kaldi
+   
+  The top-level installation instructions are in the file INSTALL. 
+  For Windows, there are separate instructions (unfortunately, not actively maintained and woefully out of date)
+   in windows/INSTALL.
+  See also \ref build_setup which explains how the build process
+  works internally.
+
+  The example scripts are in egs/
+
+*/
